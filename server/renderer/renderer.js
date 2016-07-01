@@ -11,7 +11,7 @@ function Renderer (templatePath) {
     return resolvePug().then((resolvedPath) => {
       try {
         const jadeLocals = Object.assign({}, locals)
-        const html = pug.renderFile(resolvedPath, jadeLocals);
+        const html = pug.renderFile(resolvedPath, jadeLocals)
         log.info(` ====> Rendering HTML for ${templatePath}...`)
         return resolve(html)
       } catch (err) {
