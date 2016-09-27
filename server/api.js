@@ -1,7 +1,7 @@
-'use strict'
-
-const api = require('express').Router()
+const Router = require('express').Router
 const Renderer = require('./renderer')
+
+const api = new Router()
 
 api.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
@@ -12,8 +12,8 @@ api.use((req, res, next) => {
 api.get('/', (req, res) => {
   const render = new Renderer('app/views/index')
   render()
-    .then((html) => res.send(html))
-    .catch((err) => res.send({status: 500, message: JSON.stringify(err)}))
+    .then(html => res.send(html))
+    .catch(err => res.send({status: 500, message: JSON.stringify(err)}))
 })
 
 module.exports = api

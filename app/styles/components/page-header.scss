@@ -1,0 +1,23 @@
+.page-header {
+  background-image: linear-gradient(120deg, #155799, #159957);
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (min-width: 64em) {
+  .page-header {
+    padding: 3.25rem 4.25rem;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .page-header {
+    padding: 1.25rem 2.25rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .page-header {
+    padding: .25rem;
+  }
+}
