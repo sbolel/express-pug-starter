@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 6.6.0
+dependencies:
+  override:
+    - gem install scss-lint
+    - npm install node-sass
+    - npm rebuild node-sass
+    - npm install
+  cache_directories:
+    - "node_modules"
+    - "~/.npm"
+test:
+  pre:
+    - npm run sass
