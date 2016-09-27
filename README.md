@@ -1,5 +1,6 @@
 # express-pug-starter
 
+[![circle-ci][build-image]][build-url]
 [![NPM version][npm-image]][npm-url]
 [![NPM Dependency Status][daviddm-image]][daviddm-url]
 [![js-standard][standard-image]][standard-url]
@@ -57,3 +58,5 @@ Lines        : 76.32% ( 87/114 )
 [license-url]: https://github.com/sbolel/express-pug-starter/blob/master/LICENSE
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [standard-url]: http://standardjs.com/
+[build-image]: https://circleci.com/gh/sbolel/express-pug-starter.svg?style=shield&circle-token=adca1796b387c863c3923fa3de355ccf7521f6de
+[build-url]: https://circleci.com/gh/sbolel/express-pug-starter
