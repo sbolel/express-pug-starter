@@ -1,6 +1,6 @@
 verbose: false
 instrumentation:
-    baseline-file: ./.coverage/json/coverage-baseline.json
+    baseline-file: ./coverage/json/coverage-baseline.json
     compact: true
     complete-copy: false
     default-excludes: true
@@ -13,7 +13,7 @@ instrumentation:
     variable: __coverage__
 
 reporting:
-    dir: ./.coverage
+    dir: ./coverage
     print: summary
     reports:
         - lcov

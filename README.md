@@ -27,7 +27,7 @@ npm install             # install dependencies
 
 ##### Tests
 
-`npm test` – run tests with [Mocha][mocha], validate standard style
+`npm test` – run tests with [Mocha][mocha], validate standard style, generate coverage report (`.coverage/`)
 
 ##### Styles
 
