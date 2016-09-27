@@ -35,6 +35,17 @@ npm install             # install dependencies
 
 `npm run sass:watch` - compile scss, watch for changes
 
+#### Coverage
+
+```
+=============================== Coverage summary ===============================
+Statements   : 76.52% ( 88/115 )
+Branches     : 45.83% ( 11/24 )
+Functions    : 40% ( 2/5 )
+Lines        : 76.32% ( 87/114 )
+================================================================================
+```
+
 <!-- LINKS -->
 
 [npm-image]: https://img.shields.io/npm/v/express-pug-starter.svg
