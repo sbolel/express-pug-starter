@@ -1,5 +1,3 @@
-'use strict'
-
 const nodeEnv = process.env.NODE_ENV
 const config = {
   log: {}
@@ -15,8 +13,7 @@ if (nodeEnv === 'development') {
   config.log.consoleLevel = 'error'
   config.log.logentriesLevel = 'error'
 } else {
-  console.error('NODE_ENV set to invalid value. Exiting.')
-  process.exit(1)
+  throw new Error('NODE_ENV set to invalid value. Exiting.')
 }
 
 config.contentful = {

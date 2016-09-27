@@ -1,0 +1,49 @@
+.btn {
+  background-color: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .2);
+  border-radius: .3rem;
+  border-style: solid;
+  border-width: 1px;
+  color: rgba(255, 255, 255, .7);
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: color .2s, background-color .2s, border-color .2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+  }
+
+  + .btn {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .btn {
+    padding: .75rem 1rem;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .btn {
+    font-size: .9rem;
+    padding: .6rem .9rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .btn {
+    display: block;
+    font-size: .9rem;
+    padding: .75rem;
+    width: 100%;
+  }
+
+  .btn + .btn {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}

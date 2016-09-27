@@ -1,5 +1,3 @@
-'use strict'
-
 const contentful = require('contentful')
 const config = require('../config')
 

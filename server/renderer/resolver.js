@@ -1,5 +1,3 @@
-'use strict'
-
 const fs = require('fs')
 const log = require('../logger')
 
@@ -10,7 +8,7 @@ function Resolver (path) {
     new Promise((resolve, reject) =>
       fs.access(self.path, fs.F_OK, (err) => {
         if (err) {
-          log.err(err)
+          log.error(err)
           reject(err)
         } else {
           log.info('Success')
