@@ -1,0 +1,29 @@
+verbose: false
+instrumentation:
+    baseline-file: ./.coverage/json/coverage-baseline.json
+    compact: true
+    complete-copy: false
+    default-excludes: true
+    embed-source: false
+    excludes: ['node_modules', 'gulpfile.js']
+    include-all-sources: true
+    preserve-comments: false
+    root: ./
+    save-baseline: false
+    variable: __coverage__
+
+reporting:
+    dir: ./.coverage
+    print: summary
+    reports:
+        - lcov
+        - json
+    watermarks:
+        branches: [50, 80]
+        functions: [50, 80]
+        lines: [50, 80]
+        statements: [50, 80]
+
+hooks:
+    hook-run-in-context: false
+    post-require-hook: null

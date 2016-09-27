@@ -1,33 +1,14 @@
-'use strict'
-
 const gulp = require('gulp')
-const banner = require('gulp-banner')
-const compass = require('gulp-compass')
-const path = require('path')
-// const rename = require('gulp-rename')
-// const watch = require('gulp-watch')
+const sass = require('gulp-sass')
 
-const pkg = require('./package.json')
-
-const comment = '/*\n' +
-    ' * <%= pkg.name %> <%= pkg.version %>\n' +
-    ' * <%= pkg.description %>\n' +
-    ' * <%= pkg.homepage %>\n' +
-    ' * Copyright 2016 <%= pkg.author %>\n' +
-    ' */\n'
-
-gulp.task('styles', () => {
-  gulp.src('./app/assets/*.scss')
-    .pipe(compass({
-      project: path.join(__dirname, 'app/assets'),
-      import_path: '../../node_modules',
-      sass: './sass',
-      css: '../dist',
-      image: './image',
-      style: 'compressed'
-    }))
-    .pipe(gulp.dest('app/dist'))
-  gulp.src('./app/dist/main.css')
-    .pipe(banner(comment, { pkg: pkg }))
-    .pipe(gulp.dest('app/dist'))
+gulp.task('sass', function () {
+  return gulp.src('./app/styles/index.scss')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./app/dist'))
 })
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./app/**/*.scss', ['sass'])
+})
+
+gulp.task('default', ['sass'])

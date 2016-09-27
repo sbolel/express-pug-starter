@@ -10,6 +10,31 @@ Requires [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.org/), which
 
 Requires [Ruby](https://www.ruby-lang.org/en/) & [Compass](https://rubygems.org/gems/compass) for building styles.
 
+#### Getting Started
+
+```sh
+git clone https://github.com/sbolel/express-pug-starter.git
+cd express-pug-starter
+cp .env_sample .env     # create dotenv file
+npm install             # install dependencies
+```
+
+##### Server
+
+`npm start` - start application on [localhost:4000](http://localhost:4000/)
+
+`npm run debug` - for debugging, start the app using [nodemon][nodemon]
+
+##### Tests
+
+`npm test` – run tests with [Mocha][mocha], validate standard style
+
+##### Styles
+
+`npm run sass` - compile scss
+
+`npm run sass:watch` - compile scss, watch for changes
+
 <!-- LINKS -->
 
 [npm-image]: https://img.shields.io/npm/v/express-pug-starter.svg
