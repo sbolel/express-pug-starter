@@ -1,6 +1,7 @@
 # express-pug-starter
 
 [![circle-ci][build-image]][build-url]
+[![Code Climate][codeclimate-image]][codeclimate-url]
 [![NPM version][npm-image]][npm-url]
 [![NPM Dependency Status][daviddm-image]][daviddm-url]
 [![js-standard][standard-image]][standard-url]
@@ -60,3 +61,5 @@ Lines        : 76.32% ( 87/114 )
 [standard-url]: http://standardjs.com/
 [build-image]: https://circleci.com/gh/sbolel/express-pug-starter.svg?style=shield&circle-token=adca1796b387c863c3923fa3de355ccf7521f6de
 [build-url]: https://circleci.com/gh/sbolel/express-pug-starter
+[codeclimate-image]: https://codeclimate.com/github/sbolel/express-pug-starter/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/sbolel/express-pug-starter
