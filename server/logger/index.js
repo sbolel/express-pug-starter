@@ -40,20 +40,6 @@ winston.handleExceptions(
   })
 )
 
-if (process.env.LOGENTRIES_TOKEN) {
-  winston.add(winston.transports.Logentries, {
-    json: true,
-    level: config.log.logentriesLevel,
-    token: process.env.LOGENTRIES_TOKEN
-  })
-  winston.handleExceptions(
-    new winston.transports.Logentries({
-      json: true,
-      token: process.env.LOGENTRIES_TOKEN
-    })
-  )
-}
-
 winston.exitOnError = false
 
 winston.info('logger initialized.')
