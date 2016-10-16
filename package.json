@@ -69,12 +69,19 @@
     "firebase": "3.5.0"
   },
   "keywords": [
+    "cms",
     "compass",
+    "contentful",
     "express",
+    "expressjs",
+    "firebase",
     "generator",
     "jade",
     "mocha",
+    "mocha",
+    "node",
     "pug",
+    "seed",
     "skeleton",
     "standard",
     "starter"
