@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== 'production' && process.env.APP_ENV !== 'ci') {
+if (process.env.NODE_ENV !== 'production' && !process.env.CI) {
   require('dotenv').config() // eslint-disable-line global-require
 }
 

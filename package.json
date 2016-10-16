@@ -30,7 +30,7 @@
     "lint:standard": "./node_modules/.bin/standard",
     "pretest": "./node_modules/.bin/npm-run-all lint:standard lint:js lint:scss",
     "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/npm-run-all test:cover test:report",
-    "test:cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -R test/**/* --timeout 5000",
+    "test:cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -R test/**/*",
     "test:report": "./node_modules/.bin/istanbul report --config .istanbul.yml --root coverage/"
   },
   "dependencies": {
