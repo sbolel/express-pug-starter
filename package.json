@@ -1,6 +1,6 @@
 {
   "name": "express-pug-starter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "sbolel/express-pug-starter",
   "license": "MIT",
   "homepage": "https://sbolel.github.io/express-pug-starter",
@@ -16,8 +16,8 @@
   "contributors": [],
   "main": "server/index.js",
   "engines": {
-    "node": "~6.2.2",
-    "npm": "~3.10.3"
+    "node": "~6.8.1",
+    "npm": "~3.10.8"
   },
   "scripts": {
     "debug": "./node_modules/.bin/npm-run-all ./node_modules/.bin/nodemon server/index.js",
