@@ -18,6 +18,7 @@ reporting:
     reports:
         - lcov
         - json
+        - html
     watermarks:
         branches: [50, 80]
         functions: [50, 80]
