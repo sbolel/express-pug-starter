@@ -1,13 +1,15 @@
 # express-pug-starter
 
-[![circle-ci][build-image]][build-url]
-[![Code Climate][codeclimate-image]][codeclimate-url]
-[![Test Coverage](https://codeclimate.com/github/sbolel/express-pug-starter/badges/coverage.svg)](https://codeclimate.com/github/sbolel/express-pug-starter/coverage)
 [![NPM version][npm-image]][npm-url]
-[![NPM Dependency Status][daviddm-image]][daviddm-url]
-[![js-standard][standard-image]][standard-url]
 [![License][license-image]][license-url]
+[![NPM Dependency Status][daviddm-image]][daviddm-url]
 [![NPM downloads][npm-downloads-image]][npm-url]
+<br/>
+[![circle-ci][build-image]][build-url]
+[![Test Coverage](https://codeclimate.com/github/sbolel/express-pug-starter/badges/coverage.svg)](https://codeclimate.com/github/sbolel/express-pug-starter/coverage)
+[![Code Climate][codeclimate-image]][codeclimate-url]
+[![js-standard][standard-image]][standard-url]
+
 
 Requires [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.org/), which can both be installed by following the instructions on https://nodejs.org/. Installing Node.js also installs npm.
 
