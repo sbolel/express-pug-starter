@@ -89,6 +89,9 @@
   "standard": {
     "env": [
       "mocha"
+    ],
+    "exclude": [
+      "coverage"
     ]
   },
   "sasslintConfig": ".scss-lint.yml"

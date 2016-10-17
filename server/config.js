@@ -1,3 +1,6 @@
+// eslint-disable-next-line global-require
+if (process.env.NODE_ENV !== 'production' && !process.env.CI) require('dotenv').config()
+
 const nodeEnv = process.env.NODE_ENV
 const config = {
   log: {}
@@ -14,12 +17,6 @@ if (nodeEnv === 'development') {
   config.log.logentriesLevel = 'error'
 } else {
   throw new Error('NODE_ENV set to invalid value. Exiting.')
-}
-
-config.contentful = {
-  host: process.env.contentful_host,
-  space: process.env.contentful_space,
-  accessToken: process.env.contentful_token
 }
 
 module.exports = config

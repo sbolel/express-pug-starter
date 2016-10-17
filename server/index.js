@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV !== 'production' && !process.env.CI) {
-  require('dotenv').config() // eslint-disable-line global-require
-}
-
 const express = require('express')
 const engines = require('consolidate')
 const path = require('path')
