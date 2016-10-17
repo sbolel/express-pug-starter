@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Express-pug-starter by sbolel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Express-pug-starter</h1>
+      <h2 class="project-tagline">Starter Node.js server with Express.js, Pug, scss, Mocha, Standard, eslint</h2>
+      <a href="https://github.com/sbolel/express-pug-starter" class="btn">View on GitHub</a>
+      <a href="https://github.com/sbolel/express-pug-starter/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/sbolel/express-pug-starter/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://npmjs.org/package/express-pug-starter"><img src="https://img.shields.io/npm/v/express-pug-starter.svg" alt="NPM version"></a>
+<a href="https://github.com/sbolel/express-pug-starter/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/express-pug-starter.svg" alt="License"></a>
+<a href="https://david-dm.org/sbolel/express-pug-starter"><img src="https://img.shields.io/david/sbolel/express-pug-starter.svg" alt="NPM Dependency Status"></a>
+<a href="https://npmjs.org/%7Esbolel/express-pug-starter"><img src="https://img.shields.io/npm/dm/express-pug-starter.svg" alt="NPM downloads"></a>
+<a href="https://circleci.com/gh/sbolel/express-pug-starter"><img src="https://circleci.com/gh/sbolel/express-pug-starter.svg?style=shield&amp;circle-token=adca1796b387c863c3923fa3de355ccf7521f6de" alt="circle-ci"></a>
+<a href="https://codeclimate.com/github/sbolel/express-pug-starter/coverage"><img src="https://codeclimate.com/github/sbolel/express-pug-starter/badges/coverage.svg" alt="Test Coverage"></a>
+<a href="https://codeclimate.com/github/sbolel/express-pug-starter"><img src="https://codeclimate.com/github/sbolel/express-pug-starter/badges/gpa.svg" alt="Code Climate"></a>
+<a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="js-standard"></a></p>
+
+<h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h1>
+
+<ul>
+<li>Server
+
+<ul>
+<li>Express.js</li>
+<li>Contentful (optional)</li>
+<li>Firebase (optional)</li>
+</ul>
+</li>
+<li>Testing
+
+<ul>
+<li>Mocha, Chai for unit testing</li>
+<li>Supertest for testing routes</li>
+<li>Istanbul coverage reports</li>
+<li>linters
+
+<ul>
+<li>standard style</li>
+<li>eslint</li>
+<li>scss-lint</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Integrations
+
+<ul>
+<li>CircleCI continuous integration</li>
+<li>CodeClimate code analysis</li>
+</ul>
+</li>
+</ul>
+
+<p>Requires <a href="https://nodejs.org/">Node.js</a> and <a href="https://www.npmjs.org/">npm</a>, which can both be installed by following the instructions on <a href="https://nodejs.org/">https://nodejs.org/</a>. Installing Node.js also installs npm.</p>
+
+<p>Requires <a href="https://www.ruby-lang.org/en/">Ruby</a> &amp; <a href="https://rubygems.org/gems/compass">Compass</a> for building styles.</p>
+
+<h4>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h4>
+
+<div class="highlight highlight-source-shell"><pre>git clone https://github.com/sbolel/express-pug-starter.git
+<span class="pl-c1">cd</span> express-pug-starter
+cp .env_sample .env     <span class="pl-c"># create dotenv file and add missing vars</span>
+npm install             <span class="pl-c"># install dependencies</span></pre></div>
+
+<h5>
+<a id="server" class="anchor" href="#server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Server</h5>
+
+<p><code>npm start</code> - start application on <a href="http://localhost:4000/">localhost:4000</a></p>
+
+<p><code>npm run debug</code> - for debugging, start the app using [nodemon][nodemon]</p>
+
+<h5>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests</h5>
+
+<p><code>npm test</code> – run tests with [Mocha][mocha], validate standard style, generate coverage report (<code>.coverage/</code>)</p>
+
+<h5>
+<a id="styles" class="anchor" href="#styles" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Styles</h5>
+
+<p><code>npm run sass</code> - compile scss</p>
+
+<p><code>npm run sass:watch</code> - compile scss, watch for changes</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/sbolel/express-pug-starter">Express-pug-starter</a> is maintained by <a href="https://github.com/sbolel">sbolel</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
