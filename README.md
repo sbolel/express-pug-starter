@@ -2,6 +2,7 @@
 
 [![circle-ci][build-image]][build-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
+[![Test Coverage](https://codeclimate.com/github/sbolel/express-pug-starter/badges/coverage.svg)](https://codeclimate.com/github/sbolel/express-pug-starter/coverage)
 [![NPM version][npm-image]][npm-url]
 [![NPM Dependency Status][daviddm-image]][daviddm-url]
 [![js-standard][standard-image]][standard-url]
