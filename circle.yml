@@ -1,13 +1,14 @@
 machine:
   node:
-    version: 6.8.1
+    version: 6.9.0
+
 dependencies:
   override:
     - gem install scss-lint
     - npm install
   cache_directories:
-    - "node_modules"
-    - "~/.npm"
+    - node_modules
+
 test:
   pre:
     - npm run sass
