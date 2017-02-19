@@ -13,7 +13,7 @@
 
 Requires [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.org/), which can both be installed by following the instructions on https://nodejs.org/. Installing Node.js also installs npm.
 
-Requires [Ruby](https://www.ruby-lang.org/en/) & [Compass](https://rubygems.org/gems/compass) for building styles.
+~Requires [Ruby](https://www.ruby-lang.org/en/) & [Compass](https://rubygems.org/gems/compass) for building styles.~
 
 #### Getting Started
 
