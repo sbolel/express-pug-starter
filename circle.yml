@@ -1,14 +1,21 @@
-machine:
-  node:
-    version: 6.9.0
+version: 2
 
-dependencies:
-  override:
-    - gem install scss-lint
-    - npm install
-  cache_directories:
-    - node_modules
+executorType: docker
 
-test:
-  pre:
-    - npm run sass
+containerInfo:
+  - image: node:6.9.2
+
+stages:
+  build:
+    workDir: ~/express-pug-starter
+
+    steps:
+      - type: checkout
+
+      - type: shell
+        command: npm install
+
+      - type: shell
+        command: npm test
+        environment:
+          - NODE_ENV: "test"
