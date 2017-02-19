@@ -20,18 +20,18 @@
     "npm": "~3.10.8"
   },
   "scripts": {
-    "debug": "./node_modules/.bin/npm-run-all ./node_modules/.bin/nodemon server/index.js",
-    "start": "./node_modules/.bin/npm-run-all sass start:prod",
+    "debug": "nodemon server/index.js",
+    "start": "run-s sass start:prod",
     "start:prod": "node server/index.js",
-    "sass": "./node_modules/.bin/gulp sass",
-    "sass:watch": "./node_modules/.bin/gulp sass:watch",
-    "lint:js": "./node_modules/.bin/eslint -c .eslintrc.yml ./**/*.js --ignore-path .eslintignore",
+    "sass": "gulp sass",
+    "sass:watch": "gulp sass:watch",
+    "lint:js": "eslint -c .eslintrc.yml ./**/*.js --ignore-path .eslintignore",
     "lint:scss": "scss-lint -c .scss-lint.yml ./app/**/*.scss",
-    "lint:standard": "./node_modules/.bin/standard",
-    "pretest": "./node_modules/.bin/npm-run-all lint:standard lint:js lint:scss",
-    "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/npm-run-all test:cover test:report",
-    "test:cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -R test/**/*",
-    "test:report": "./node_modules/.bin/istanbul report --config .istanbul.yml --root coverage/"
+    "lint:standard": "standard",
+    "pretest": "run-p lint:standard lint:js",
+    "test": "cross-env NODE_ENV=test run-s test:cover test:report",
+    "test:cover": "istanbul cover node_modules/.bin/_mocha -R test/**/*",
+    "test:report": "istanbul report --config .istanbul.yml --root coverage/"
   },
   "dependencies": {
     "consolidate": "0.14.5",
@@ -60,6 +60,7 @@
     "nodemon": "1.11.0",
     "npm-run-all": "4.0.1",
     "opn": "4.0.2",
+    "scss-lint": "0.0.0",
     "standard": "8.6.0",
     "supertest": "3.0.0",
     "webpack": "2.2.1"
