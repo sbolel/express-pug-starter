@@ -62,7 +62,7 @@ Lines        : 87.96% ( 95/108 )
 [license-url]: https://github.com/sbolel/express-pug-starter/blob/master/LICENSE
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [standard-url]: http://standardjs.com/
-[build-image]: https://circleci.com/gh/sbolel/express-pug-starter.svg?style=shield&circle-token=adca1796b387c863c3923fa3de355ccf7521f6de
+[build-image]: https://circleci.com/gh/sbolel/express-pug-starter.svg?style=shield
 [build-url]: https://circleci.com/gh/sbolel/express-pug-starter
 [codeclimate-image]: https://codeclimate.com/github/sbolel/express-pug-starter/badges/gpa.svg
 [codeclimate-url]: https://codeclimate.com/github/sbolel/express-pug-starter
