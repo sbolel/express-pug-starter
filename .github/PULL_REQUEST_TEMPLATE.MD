@@ -5,7 +5,6 @@
 ### Basic Checks
 
 - [ ] Tests (`npm test`) are passing locally
-- [ ] Build (`npm run build`) succeeds locally
 
 ### Screenshots
 

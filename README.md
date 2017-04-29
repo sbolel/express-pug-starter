@@ -13,8 +13,6 @@
 
 Requires [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.org/), which can both be installed by following the instructions on https://nodejs.org/. Installing Node.js also installs npm.
 
-~Requires [Ruby](https://www.ruby-lang.org/en/) & [Compass](https://rubygems.org/gems/compass) for building styles.~
-
 #### Getting Started
 
 ```sh
@@ -44,10 +42,10 @@ npm install             # install dependencies
 
 ```
 =============================== Coverage summary ===============================
-Statements   : 88.18% ( 97/110 )
-Branches     : 54.55% ( 12/22 )
-Functions    : 100% ( 5/5 )
-Lines        : 87.96% ( 95/108 )
+Statements   : 78.18% ( 86/110 )
+Branches     : 45.45% ( 10/22 )
+Functions    : 40% ( 2/5 )
+Lines        : 77.78% ( 84/108 )
 ================================================================================
 ```
 
