@@ -16,19 +16,17 @@
   "contributors": [],
   "main": "server/index.js",
   "engines": {
-    "node": "~6.9.0",
-    "npm": "~3.10.8"
+    "node": ">=7.0.0",
+    "npm": ">=4.5.0"
   },
   "scripts": {
-    "debug": "nodemon server/index.js",
-    "start": "run-s sass start:prod",
-    "start:prod": "node server/index.js",
-    "sass": "gulp sass",
-    "sass:watch": "gulp sass:watch",
-    "lint:js": "eslint -c .eslintrc.yml ./**/*.js --ignore-path .eslintignore",
-    "lint:scss": "scss-lint -c .scss-lint.yml ./app/**/*.scss",
+    "debug": "gulp",
+    "lint": "run-p lint:eslint lint:standard",
+    "lint:eslint": "eslint -c .eslintrc.yml ./**/*.js --ignore-path .eslintignore",
     "lint:standard": "standard",
-    "pretest": "run-p lint:standard lint:js",
+    "pretest": "npm run lint",
+    "start": "node server/index.js",
+    "styles": "gulp sass",
     "test": "cross-env NODE_ENV=test run-s test:cover test:report",
     "test:cover": "istanbul cover node_modules/.bin/_mocha -R test/**/*",
     "test:report": "istanbul report --config .istanbul.yml --root coverage/"
@@ -47,8 +45,9 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "7.0.0",
     "eslint-plugin-standard": "3.0.1",
-    "gulp": "3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-banner": "0.1.3",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "3.1.0",
     "istanbul": "^0.4.5",
     "mocha": "3.3.0",
@@ -56,7 +55,6 @@
     "nodemon": "1.11.0",
     "npm-run-all": "^4.0.2",
     "opn": "5.0.0",
-    "scss-lint": "0.0.0",
     "standard": "10.0.2",
     "supertest": "3.0.0",
     "webpack": "2.5.1"
