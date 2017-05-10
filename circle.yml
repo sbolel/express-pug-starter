@@ -3,19 +3,31 @@ version: 2
 executorType: docker
 
 containerInfo:
-  - image: node:6.9.2
+  - image: node:7.5.0
+    env:
+      - NODE_ENV=prod
 
 stages:
+
   build:
-    workDir: ~/express-pug-starter
+    workDir: ~/myApp
 
     steps:
       - type: checkout
 
-      - type: shell
-        command: npm install
+      - restore_cache:
+          keys:
+            - node_modules
 
-      - type: shell
-        command: npm test
-        environment:
-          - NODE_ENV: "test"
+      - run:
+          name: Installing dependencies
+          command: npm install
+
+      - save_cache:
+          key: node_modules
+          paths:
+            - ~/myApp/node_modules
+
+      - run:
+          name: Running tests
+          command: npm test
