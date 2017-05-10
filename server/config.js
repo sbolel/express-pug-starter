@@ -16,7 +16,7 @@ if (nodeEnv === 'development') {
   config.log.consoleLevel = 'error'
   config.log.logentriesLevel = 'error'
 } else {
-  throw new Error('NODE_ENV set to invalid value. Exiting.')
+  throw new Error('nodeEnv set to invalid value. Exiting!')
 }
 
 module.exports = config

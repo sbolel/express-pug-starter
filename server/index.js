@@ -1,40 +1,37 @@
 const express = require('express')
-const engines = require('consolidate')
 const path = require('path')
 const api = require('./api')
 const log = require('./logger')
-const pkg = require('../package.json')
 
+// new express app
 const app = express()
 
-app.enable('trust proxy')
-
-app.engine('html', engines.hogan)
-
+// set express port
 if (process.env.NODE_ENV === 'test') {
   app.set('port', 4001)
 } else {
   app.set('port', process.env.PORT || 4000)
 }
 
-// views
+// configure views
+app.set('view engine', 'pug')
 app.set('views', path.resolve(__dirname, '../app'))
-app.set('view engine', 'html')
 
-app.locals = {
-  pkg
-}
-
-// static assets
-app.use('/fonts', express.static(path.resolve(__dirname, '../app/assets/fonts')))
-app.use('/img', express.static(path.resolve(__dirname, '../app/assets/img')))
-
-// use api
+// define API routes
 app.use(api)
 
-// init server
+// define static routes
+app.use('/css', express.static(path.resolve(__dirname, '../app/assets/css')))
+app.use('/dist', express.static(path.resolve(__dirname, '../app/dist')))
+app.use('/fonts', express.static(path.resolve(__dirname, '../app/assets/fonts')))
+app.use('/img', express.static(path.resolve(__dirname, '../app/assets/img')))
+app.use('/js', express.static(path.resolve(__dirname, '../app/assets/js')))
+app.use('/favicon.ico', express.static(path.resolve(__dirname, '../app/assets/img/favicon.ico')))
+
+// initialize server
 const server = app.listen(app.get('port'), () => {
-  log.info(`Express server listening on port ${server.address().port}`)
+  log.info(`Express server started on http://localhost:${server.address().port}`)
 })
 
+// export server app
 module.exports = server
