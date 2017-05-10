@@ -1,23 +1,8 @@
 const fs = require('fs')
-const log = require('../logger')
 
-function Resolver (path) {
-  this.path = `${path}.pug`
-  const self = this
-  const resolvePug = () =>
-    new Promise((resolve, reject) =>
-      fs.access(self.path, fs.F_OK, (err) => {
-        if (err) {
-          log.error(err)
-          reject(err)
-        } else {
-          log.info('Success')
-          resolve(self.path)
-        }
-      })
-    )
-  resolvePug.prototype = this.prototype
-  return resolvePug
+module.exports = function (viewPath) {
+  const view = `${viewPath}.pug`
+  return () => new Promise((resolve, reject) =>
+    fs.access(view, fs.F_OK, err => (!err ? resolve(view) : reject(err)))
+  )
 }
-
-module.exports = Resolver

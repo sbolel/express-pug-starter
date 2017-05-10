@@ -1,26 +1,22 @@
 const path = require('path')
 const pug = require('pug')
-const Resolver = require('./resolver')
 const log = require('../logger')
+const Resolver = require('./resolver')
 
-function Renderer (templatePath) {
-  const render = locals => new Promise((resolve, reject) => {
-    const resolvePug = new Resolver(path.join(process.cwd(), templatePath))
-    return resolvePug().then((resolvedPath) => {
+module.exports = function (viewPath) {
+  return locals => new Promise((resolve, reject) => {
+    const resolvePug = new Resolver(path.join(process.cwd(), viewPath))
+    return resolvePug().then(resolvedPath => {
       try {
-        const jadeLocals = Object.assign({}, locals)
-        const html = pug.renderFile(resolvedPath, jadeLocals)
-        log.info(` ====> Rendering HTML for ${templatePath}...`)
-        return resolve(html)
+        log.debug(` --> Rendering template "${viewPath}"`)
+        return resolve(pug.renderFile(resolvedPath, locals))
       } catch (err) {
-        log.info(` ====> ERROR rendering HTML for ${templatePath}!`)
-        log.error(err)
+        log.error(` --> Error rendering template "${viewPath}"`, err)
         return reject(err)
       }
-    }).catch(err => reject(err))
+    }).catch(err => {
+      log.error(` --> Error resolving template "${viewPath}"`, err)
+      return reject(err)
+    })
   })
-  render.prototype = this.prototype
-  return render
 }
-
-module.exports = Renderer

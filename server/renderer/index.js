@@ -1,3 +1,1 @@
-const Renderer = require('./renderer')
-
-module.exports = Renderer
+module.exports = require('./renderer')
